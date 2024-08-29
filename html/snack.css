@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('Lexend_Deca/LexendDeca-VariableFont_wght.ttf') format('truetype');
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+html, body {
+    margin: 0; 
+    padding: 0; 
+    height: 100%; 
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%; 
+}
+
+/* ------------------- Navigation Bar ------------------- */
+nav {
+  padding: 5px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  z-index: 1;
+   position: fixed; /* Torna a navegação fixa */
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+nav .logo img {
+  height: 25px;
+  width: auto;
+  margin-right: 10px;
+}
+nav .logo h1 {
+  font-family: "Lexend Deca";
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #77B6E6 0%, #FFB422 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin-left: 1.5rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 95%;
+  font-weight: 400;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-family: "Lexend Deca";
+}
+
+nav ul li a:hover {
+  background-color: #f5f5f5;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 1px;
+  background-color: #1f1f1f;
+  display: block;
+  margin: 7px auto;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger-active {
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.6s;
+  transform: rotate(45deg);
+}
+
+.hamburger-active .line:nth-child(2) {
+  width: 0px;
+}
+
+.hamburger-active .line:nth-child(1),
+.hamburger-active .line:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.hamburger-active .line:nth-child(1) {
+  transform: translateY(12px);
+}
+
+.hamburger-active .line:nth-child(3) {
+  transform: translateY(-5px) rotate(90deg);
+}
+
+.menubar {
+  position: absolute;
+  top: 0;
+  left: -60%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+  height: 100vh;
+  padding: 20% 0;
+  background: rgba(255, 255, 255);
+  transition: all 0.5s ease-in;
+  z-index: 2;
+}
+.active {
+  left: 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.menubar ul {
+  padding: 0;
+  list-style: none;
+}
+.menubar ul li {
+  margin-bottom: 32px;
+}
+
+.menubar ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 95%;
+  font-weight: 400;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.menubar ul li a:hover {
+  background-color: #f5f5f5;
+}
+
+/* ------------------- Main ------------------- */
+#main{
+    background-color: black;
+}
+
+/* ------------------- Image ------------------- */
+.banner-image {
+    width: 100%;
+    height: 100%;
+}
+
+/* ------------------- Content1 ------------------- */
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  padding-right: 100px; 
+}
+
+#Encomendas{
+  padding-top: 60px;
+  font-family: "Lexend Deca";
+  font-weight: 600;
+  font-size: 1.9vw;
+  text-align: right;
+  margin-right: 50px;
+}
+
+#Aplicação{
+  font-family: "Lexend Deca";
+  font-weight: 600;
+  font-size: 1.3vw;
+  z-index: 3;
+  text-align: right;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, auto);
+  gap: 10px;
+}
+
+.word {
+  position: relative;
+  max-width: 20vw;
+  left: 2vw;
+  top: 5.5vw;
+  font-size: 1.3vw;
+  color: #8F8F8F;
+  text-align: left;
+  font-family: "Lexend Deca", sans-serif;;
+}
+
+.ver{
+  position: relative;
+  max-width: 18vw;
+  top: 90px;
+  left: 78vw;
+  font-weight: 600;
+  font-size: 1.4vw;
+  font-family: "Lexend Deca", sans-serif;;
+  text-decoration: underline;
+}
+
+.mockup {
+    margin-top: -10%;
+    margin-left: 15%;
+    margin-bottom: -5%;
+    max-width: 100%; 
+    height: auto; 
+    width: 22%;
+    z-index: 2;
+}
+
+.icons {
+  margin-top: -15%;
+  margin-left: 60%;
+  display: flex;
+  justify-content: center;
+  gap: 6%; 
+  padding-top: 20px;
+}
+
+.icons img {
+  width: 13vw;
+}
+
+.linha-horizontal {
+  margin-top: 17%;
+  width: 100%;
+  height: 3px;
+  background-color: #DBDBDB;
+}
+
+/* ------------------- Content2 ------------------- */
+#container3 {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Permite quebrar linhas em telas menores */
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5px; /* Espaçamento consistente entre o retângulo, título e info */
+}
+
+.rectangle {
+  background-color: #ffffff;
+  width: 30vw;
+  height: 15vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); 
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.titles {
+  font-family: "Lexend Deca";
+  font-weight: 600;
+  font-size: 1.6vw;
+  margin: 0; /* Remove qualquer margem superior/inferior */
+}
+
+.info {
+  font-family: "Lexend Deca";
+  font-weight: 600;
+  font-size: 1.1vw;
+  margin: 0; /* Remove qualquer margem superior/inferior */
+}
+
+/* ------------------- Content3 ------------------- */
+
+#perto{
+  position: relative;
+  left: 2vw;
+  top: 4vw;
+  font-family: "Lexend Deca";
+  font-weight: 650;
+  font-size: 2.2vw;
+  max-width: 400px;
+}
+
+#map-container {
+  position: relative;
+  top: 4vw;
+  width: 100%;
+  max-width: 100%; /* Garantir que o mapa não ultrapasse o contêiner */
+  height: 450px; /* Definir altura fixa para o mapa */
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#content3{
+  height: 1000px;
+}
+
+/* ------------------- Content4 ------------------- */
+
+/* Content4 Styles */
+.content4-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: 80px;
+}
+
+.content4-line {
+  height: 2px;
+  background-color: #DBDBDB;
+}
+
+.left-line {
+  width: 76vw; /* Ajuste esta largura conforme necessário */
+}
+
+
+
+.content4-box {
+  width: 70vw;
+  height: 13vw;
+  background-color: white;
+  border: 3px solid #508BBC;
+  border-radius: 9px;
+  margin: 110px auto;
+  position: relative;
+  top: 3.5vw;
+  text-align: center;
+}
+
+.content4-text {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.6vw;
+  font-weight: 500;
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.content4-input-box {
+  width: 60vw;
+  height: 30%;
+  background-color: #ffffff;
+  border-radius: 9px;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.content4-input-box input[type="email"] {
+  width: 60vw; /* Ajuste a largura conforme necessário */
+  height: 100%; /* Ajuste a altura conforme necessário */
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* ------------------- Footer ------------------- */
+/* Footer Styles */
+.footer-container {
+  border: 1px solid #000000;
+  position: relative;
+  top: 1vw;
+  bottom: 90px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  max-width: 100%; /* Garante que o footer não ultrapasse a largura da viewport */
+  box-sizing: border-box; /* Inclui padding e borda na largura */
+}
+
+.footer-column h2 {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.6vw;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.item-link {
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: inherit; /* Garante que a cor do texto não seja alterada */
+  cursor: pointer;
+}
+
+.footer-column p {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: black;
+  margin: 5px 0;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+
+
+
+@media only screen and (min-width: 2560px) {
+  .mockup {
+    margin-top: -8%;
+    margin-left: 15%;
+    margin-bottom: -5%;
+    max-width: 100%; 
+    height: auto; 
+    width: 22%;
+    z-index: 2;
+  }
+
+  #perto{
+    position: relative;
+    left: 2vw;
+    top: 2.8vw;
+    font-family: "Lexend Deca";
+    font-weight: 650;
+    font-size: 2.4vw;
+    max-width: 26vw;
+  }
+  nav .logo h1 {
+    font-family: "Lexend Deca";
+    font-size: 2rem;
+    background: linear-gradient(to right, #77B6E6 0%, #FFB422 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 140%;
+    font-weight: 400;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-family: "Lexend Deca";
+  }
+  .content4-box {
+    width: 90vw;
+    height: 12vw;
+    background-color: white;
+    border: 1px solid #508BBC;
+    border-radius: 9px;
+    margin: 11vw auto;
+    position: relative;
+    bottom: 10px;
+    text-align: center;
+  }
+  .content4-input-box input[type="email"] {
+    width: 70vw; /* Ajuste a largura conforme necessário */
+    height: 3vw; /* Ajuste a altura conforme necessário */
+    padding: 10px;
+    font-size: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  #map-container {
+    position: relative;
+    top: 4vw;
+    width: 100%;
+    max-width: 100%; /* Garantir que o mapa não ultrapasse o contêiner */
+    height: 950px; /* Definir altura fixa para o mapa */
+  }
+}
+
+@media only screen and (min-width: 3840px) {
+  .mockup {
+    margin-top: -8%;
+    margin-left: 15%;
+    margin-bottom: -5%;
+    max-width: 100%; 
+    height: auto; 
+    width: 22%;
+    z-index: 2;
+  }
+
+  #perto{
+    position: relative;
+    left: 2vw;
+    top: 2.8vw;
+    font-family: "Lexend Deca";
+    font-weight: 650;
+    font-size: 2.4vw;
+    max-width: 26vw;
+  }
+  nav .logo h1 {
+    font-family: "Lexend Deca";
+    font-size: 2rem;
+    background: linear-gradient(to right, #77B6E6 0%, #FFB422 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 140%;
+    font-weight: 400;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-family: "Lexend Deca";
+  }
+  #map-container {
+    position: relative;
+    top: 4vw;
+    width: 100%;
+    max-width: 100%; /* Garantir que o mapa não ultrapasse o contêiner */
+    height: 950px; /* Definir altura fixa para o mapa */
+  }
+  .content4-box {
+    width: 90vw;
+    height: 12vw;
+    background-color: white;
+    border: 1px solid #508BBC;
+    border-radius: 9px;
+    margin: 11vw auto;
+    position: relative;
+    bottom: 10px;
+    text-align: center;
+  }
+  .content4-input-box input[type="email"] {
+    width: 70vw; /* Ajuste a largura conforme necessário */
+    height: 3vw; /* Ajuste a altura conforme necessário */
+    padding: 10px;
+    font-size: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+}
+
+
+/* <600px, 601px, 768px, 992px, 1200px */
+
+@media only screen and (max-width: 798px) {
+  .rectangle {
+    width: 45vw;
+    height: 22.5vw;
+  }
+
+  #map-container {
+    width: 100%;
+    max-width: 100%; /* Garantir que o mapa não ultrapasse o contêiner */
+    height: 450px; /* Definir altura fixa para o mapa */
+    
+  }
+  
+  .content4-input-box input[type="email"] {
+    width: 70vw; /* Ajuste a largura conforme necessário */
+    height: 6vw; /* Ajuste a altura conforme necessário */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    position: relative;
+    bottom: 3vw;
+  }
+
+  #perto{
+    position: relative;
+    left: 2vw;
+    top: 1vw;
+    font-family: "Lexend Deca";
+    font-weight: 650;
+    font-size: 2.4vw;
+  }
+
+  .titles {
+    font-size: 2vw;
+  }
+  .item {
+    margin-bottom: 10px; /* Espaçamento maior entre blocos em telas menores */
+  }
+
+  .info {
+    font-size: 1.4vw;
+  }
+
+
+  .banner-image{
+    position: relative;
+    top: 40px;
+  }
+  .content4-text {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 2.4vw;
+    font-weight: 500;
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .content4-box {
+    width: 90vw;
+    height: 25vw;
+    background-color: white;
+    border: 1px solid #508BBC;
+    border-radius: 9px;
+    margin: 11vw auto;
+    position: relative;
+    bottom: 10px;
+    text-align: center;
+  }
+
+    /* ------------------- Nav media ------------------- */
+    .hamburger {
+        display: block;
+      }
+      nav ul {
+        display: none;
+      }
+    
+    
+}
+
+@media only screen and (max-width: 1920px) {
+  #perto{
+    max-width: 34vw;
+  }
+    
+}

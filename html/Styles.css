@@ -1,0 +1,687 @@
+    @import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+
+    @font-face {
+        font-family: 'Lexend Deca';
+        src: url('Lexend_Deca/LexendDeca-VariableFont_wght.ttf') format('truetype');
+    }
+
+    body {
+        height: 2620px; 
+    }
+    html, body {
+        overflow-x: hidden; 
+    }
+
+    body, header {
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        height: 60px; 
+        background-color: #f2f2f2; 
+        z-index: 3;
+    }
+
+    
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.19); 
+        z-index: 0; 
+    }
+
+
+    
+   
+
+    .content img {
+        top :20px;
+        width: 100%; 
+        height: 540px; 
+        display: block;
+    }
+
+    .text-container2 p {
+        position: absolute;
+        left: 6%;
+        top: 220px;
+        font-size: 52px;
+        font-weight: 600;
+        font-family: 'Lexend Deca', sans-serif;
+        color: white; 
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.53); 
+        z-index: 2;
+    }
+
+
+
+    .linha-branca {
+        top:200px;
+        width: 100%; 
+        height: 2px; 
+        background-color: white; 
+    }
+
+    .Appinfo{
+        position: relative;
+        top: 40px;
+        left: 40%;
+        font-size: 28px;
+        font-family: "Lexend Deca", sans-serif;;
+        font-weight: 500;
+    }
+
+    .subinfo{
+        position: relative;
+        top: 50px;
+        left: 40%;
+        font-size: 20px;
+        font-family: "Lexend Deca", sans-serif;;
+        font-weight: 500;
+    }
+
+    .linha-horizontal {
+        position: relative;
+        top: 350px;
+        width: 100%;
+        height: 3px;
+        background-color: #DBDBDB;
+    }
+
+
+    .icons{
+        position: relative;
+        top: 140px;
+        right: -55%;
+    }
+    .app{
+        
+        width: 215px;
+        height: 62px;
+        
+    }
+
+    .play{
+        
+        width: 215px;
+        height: 62px;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .rectangleGG {
+        position: relative;
+        left: 1%;
+        top: 300px;
+        width: 460px; 
+        height: 245px; 
+        background-color: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+        margin-right: 25px;
+        border-radius: 5px;
+    }
+
+
+    .text-container2 span:nth-child(1) {
+        position: relative;
+        right: 220px;
+        top: 1265px;
+        font-style: "Lexend Deca", sans-serif;
+        font-weight: 500;
+        font-size: 27px;
+        color: #000000; 
+        text-shadow: none;
+    }
+
+
+
+    .text-container2 span:nth-child(2) {
+        color: #FFB422; 
+        margin-left: -10px;
+        position: relative;
+        right: 220px;
+        top: 1010px;
+        font-style: "Lexend Deca", sans-serif;
+        font-weight: 500;
+        font-size: 27px;
+        text-shadow: none;
+    
+    }
+    .text-container2 span:nth-child(3) {
+        color: #000000; 
+        margin-left: -10px;
+        position: relative;
+        right: 210px;
+        top: 1265px;
+        font-style: "Lexend Deca", sans-serif;
+        font-weight: 500;
+        font-size: 27px;
+        text-shadow: none;
+    
+    }
+
+    .infs{
+        position: relative;
+        top: 351px;
+        left: 25px;
+        font-size: 1.3vw;
+        font-family: "Lexend deca", sans-serif;
+        font-weight: 500;
+        
+    }
+
+    .text-container3 span:nth-child(1) {
+        position: relative;
+        top: 210px;
+        left: 990px;
+        font-style: "Lexend Deca", sans-serif;
+        font-weight: 500;
+        font-size: 27px;
+        color: #000000; 
+        text-shadow: none;
+        
+    }
+    .text-container3 span:nth-child(2) {
+        position: relative;
+        top: 210px;
+        left: 990px;
+        font-style: "Lexend Deca", sans-serif;
+        font-weight: 500;
+        font-size: 27px;
+        color: #FFB422; 
+        text-shadow: none;
+        
+    }
+    .text-container3 span:nth-child(3) {
+        position: relative;
+        top: 210px;
+        left: 990px;
+        font-style: "Lexend Deca", sans-serif;
+        font-weight: 500;
+        font-size: 27px;
+        color: #000000; 
+        text-shadow: none;
+        
+    }
+
+    .text-container3 p {
+        position: absolute;
+        font-size: 52px;
+        font-weight: 600;
+        font-family: 'Lexend Deca', sans-serif;
+        color: white; 
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.53); 
+    }
+
+    .text-container4{
+        position: absolute;
+        top: 1235px;
+        left: 20px;
+        font-size: 27px;
+        font-weight: 600;
+        font-family: 'Lexend Deca', sans-serif;
+        color: black; 
+    }
+
+    .text-container4 span:nth-child(1) {
+        
+        font-style: "Lexend Deca", sans-serif;
+        font-weight: 500;
+        font-size: 2vw;
+        color: #000000; 
+        text-shadow: none;
+        
+    }
+    .text-container4 span:nth-child(2) {
+        position: relative;
+        
+        font-style: "Lexend Deca", sans-serif;
+        font-weight: 500;
+        font-size: 2vw;
+        color: #FFB422; 
+        text-shadow: none;
+        
+    }
+    .text-container4 span:nth-child(3) {
+        position: relative;
+        
+        font-style: "Lexend Deca", sans-serif;
+        font-weight: 500;
+        font-size: 2vw;
+        color: #000000; 
+        text-shadow: none;
+        
+    }
+
+    .infs2{
+        position: relative;
+        top: 324px;
+        left: 1030px;
+        font-size: 2vw;
+        font-family: "Lexend deca", sans-serif;
+        font-weight: 500;
+    }
+
+
+    .infbuyer{
+        position: absolute;
+        top: 1265px;
+        right: 545px;
+        font-size: 1.7vw;
+        font-family: "Lexend deca", sans-serif;
+        font-weight: 600;
+    }
+
+    .bch{
+        position: relative;
+        left: 60px;
+        top: 365px;
+        font-size: 36px;
+        font-weight: 600;
+    }
+
+
+    header img {
+        width: 100%;
+        height: 65px; 
+        max-height: 150px; 
+        display: block;
+        position: relative;
+        z-index: 1; 
+        position: relative;
+        bottom: 35px;
+    }
+    
+    .navbar {
+        top: 11%;
+        left: 55%; 
+        position: relative;
+        z-index: 2;
+    }
+    
+    .navbar-nav {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-item {
+        margin-right: 30px;
+    }
+    
+    .navbar .nav-item a {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 15px; 
+        transition: color 0.3s ease; 
+    }
+    
+    .nav-link {
+        color: #fff; 
+        text-decoration: none;
+    }
+    
+    .nav-link:hover {
+        color: #007bff;
+    }
+    
+    .map{
+        position: relative;
+        top: 380px;
+        left: 20px;
+        text-align: center; 
+    }
+   
+
+    .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(7, auto);
+            gap: 10px;
+        }
+
+        .word {
+            position: relative;
+            left: 75px;
+            top: 400px;
+            font-size: 18px;
+            color: #8F8F8F;
+            text-align: left;
+            font-family: "Lexend Deca", sans-serif;;
+        }
+
+        .ver{
+            position: relative;
+            top: 440px;
+            left: 1200px;
+            font-weight: 600;
+            font-size: 20px;
+            font-family: "Lexend Deca", sans-serif;;
+            text-decoration: underline;
+        }
+
+        .linha {
+            position: relative;
+            background-color: #DBDBDB;
+            width: 100%;
+            height: 4px;
+            top: 470px;
+        }
+
+        .nn{
+            position: relative;
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 26px;
+            color: #000000;
+            font-weight: 500;
+            left: 20px;
+            top: 470px;
+        }
+        .oo{
+            position: relative;
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 500;
+            left: 20px;
+            top: 470px;
+        }
+        .pp{
+            position: relative;
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 500;
+            left: 20px;
+            top: 470px;
+        }
+        .rr{
+            position: relative;
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 500;
+            left: 20px;
+            top: 470px;
+        }
+        .nn1{
+            position: relative;
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 26px;
+            color: #000000;
+            font-weight: 500;
+            left: 450px;
+            top: 255px;
+        }
+        .oo1{
+            position: relative;
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 500;
+            left: 450px;
+            top: 255px;
+        }
+        .pp1{
+            position: relative;
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 500;
+            left: 450px;
+            top: 250px;
+        }
+
+        
+
+        .rr1{
+            position: relative;
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 500;
+            left: 450px;
+            top: 250px;
+        }
+        .ss1{
+            position: relative;
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 500;
+            left: 450px;
+            top: 250px;
+        }
+
+        .tt1{
+            position: relative;
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 500;
+            left: 450px;
+            top: 250px;
+        }
+        .nn2{
+            position: relative;
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 26px;
+            color: #000000;
+            font-weight: 500;
+            left: 760px;
+            bottom: 17px;
+        }
+        .oo2{
+            position: relative;
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 500;
+            left: 760px;
+            bottom: 17px;
+        }
+        .pp2{
+            position: relative;
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 500;
+            left: 760px;
+            bottom: 17px;
+        }
+
+        .nn3{
+            position: relative;
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 600;
+            left: 1050px;
+            bottom: 140px;
+        }
+        .oo3{
+            position: relative;
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 500;
+            left: 1050px;
+            bottom: 135px;
+        }
+        .pp3{
+            position: relative;
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 500;
+            left: 1050px;
+            bottom: 135px;
+        }
+
+        a {
+            text-decoration: none;
+          }
+       
+        
+          @media only screen and (max-width: 1045px) { /* MINIMIZED */
+            .container{
+                height: 2%;
+            }
+            .content img {
+                position: relative;
+                top: 34px;
+                width: 100%; 
+                height: 500%; 
+                display: block;
+            }
+            .navbar {
+                top: 11%;
+                left: 8%; 
+                position: relative;
+                z-index: 2;
+            }
+            .text-container2 p {
+                position: absolute;
+                left: 1%;
+                top: 20%;
+                font-size: 19px;
+                font-weight: 600;
+                font-family: 'Lexend Deca', sans-serif;
+                color: white; 
+                text-shadow: 0 0 10px rgba(0, 0, 0, 0.53); 
+                z-index: 2;
+            }
+            .Appinfo{
+                position: relative;
+                top: 55px;
+                left: 4%;
+                font-size: 28px;
+                font-family: "Lexend Deca", sans-serif;;
+                font-weight: 500;
+            }   
+            .subinfo{
+                position: relative;
+                top: 65px;
+                left: 4%;
+                font-size: 20px;
+                font-family: "Lexend Deca", sans-serif;;
+                font-weight: 500;
+            }
+            .icons{
+                position: relative;
+                top: 100px;
+                right: -4%;
+            }
+            .app{
+                
+                width: 215px;
+                height: 62px;
+                
+            }
+        
+            .play{
+                
+                width: 215px;
+                height: 62px;
+            }
+            .linha-horizontal {
+                position: relative;
+                top: 650px;
+                width: 100%;
+                height: 3px;
+                background-color: #DBDBDB;
+            }
+            .rectangleGG {
+                position: relative;
+                left: 1%;
+                top: 600px;
+                width: 300px; 
+                height: 200px; 
+                background-color: white;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+                margin-right: 25px;
+                border-radius: 5px;
+            }
+            .map{
+                position: relative;
+                top: 720px;
+                left: 10px;
+                
+                text-align: center; 
+            }
+            .text-container4{
+                position: relative;
+                top: 600px;
+                left: 2%;
+                font-size: 8px;
+                font-weight: 600;
+                font-family: 'Lexend Deca', sans-serif;
+                color: black; 
+            }
+            .text-container4 span:nth-child(1) {
+        
+                font-style: "Lexend Deca", sans-serif;
+                font-weight: 500;
+                font-size: 2vw;
+                color: #000000; 
+                text-shadow: none;
+                
+            }
+            .text-container4 span:nth-child(2) {
+                position: relative;
+                
+                font-style: "Lexend Deca", sans-serif;
+                font-weight: 500;
+                font-size: 2vw;
+                color: #FFB422; 
+                text-shadow: none;
+
+            }
+            .text-container4 span:nth-child(3) {
+                position: relative;
+                
+                font-style: "Lexend Deca", sans-serif;
+                font-weight: 500;
+                font-size: 2vw;
+                color: #000000; 
+                text-shadow: none;
+                
+            }
+            .infs{
+                position: relative;
+                top: 597px;
+                left: 25px;
+                font-size: 1.3vw;
+                font-family: "Lexend deca", sans-serif;
+                font-weight: 500;
+                
+            }
+            .infbuyer{
+                position: relative;
+                top: 540px;
+                left: 35%;
+                font-size: 2vw;
+                font-family: "Lexend deca", sans-serif;
+                font-weight: 600;
+            }
+            .bch{
+                position: relative;
+                left: 60px;
+                top: 565px;
+                font-size: 36px;
+                font-weight: 600;
+            }
+          }
+
+      
