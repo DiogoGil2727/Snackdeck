@@ -1,0 +1,895 @@
+/* ---------------------------- RESTAURANT/BAR PAGE ---------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('Lexend_Deca/LexendDeca-VariableFont_wght.ttf') format('truetype');
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/* ------------------- Navigation Bar ------------------- */
+nav {
+    padding: 5px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    z-index: 1;
+    position: fixed; /* Torna a navegação fixa */
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+nav .logo img {
+    height: 25px;
+    width: auto;
+    margin-right: 10px;
+}
+nav .logo h1 {
+    font-family: "Lexend Deca";
+    font-size: 1.1rem;
+    background: linear-gradient(to right, #77B6E6 0%, #FFB422 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin-left: 1.5rem;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 95%;
+    font-weight: 400;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-family: "Lexend Deca";
+}
+
+nav ul li a:hover {
+    background-color: #f5f5f5;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 1px;
+    background-color: #1f1f1f;
+    display: block;
+    margin: 7px auto;
+    transition: all 0.3s ease-in-out;
+}
+.hamburger-active {
+    transition: all 0.3s ease-in-out;
+    transition-delay: 0.6s;
+    transform: rotate(45deg);
+}
+
+.hamburger-active .line:nth-child(2) {
+    width: 0px;
+}
+
+.hamburger-active .line:nth-child(1),
+.hamburger-active .line:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.hamburger-active .line:nth-child(1) {
+    transform: translateY(12px);
+}
+
+.hamburger-active .line:nth-child(3) {
+    transform: translateY(-5px) rotate(90deg);
+}
+
+.menubar {
+    position: absolute;
+    top: 0;
+    left: -60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    height: 100vh;
+    padding: 20% 0;
+    background: rgba(255, 255, 255);
+    transition: all 0.5s ease-in;
+    z-index: 200000;
+}
+.active {
+    left: 0;
+    background-color: #EDEDED;
+
+}
+
+.menubar ul {
+    padding: 0;
+    list-style: none;
+}
+.menubar ul li {
+    margin-bottom: 32px;
+}
+
+.menubar ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 95%;
+    font-weight: 400;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.menubar ul li a:hover {
+    background-color: #f5f5f5;
+}
+
+.duvidas-container {
+    padding: 5px;
+    text-align: left;
+    background-color: transparent;
+    position: relative; /* Adicione esta linha para garantir o posicionamento correto */
+    bottom: 13vw;
+    left: 1vw;
+    width: 600px;
+    height: 1vw;
+    max-width: 60vw;
+}
+
+.duvidas {
+    font-family: "Lexend Deca";
+    font-size: 1.2vw;
+    font-weight: 400;
+    color: white;
+    bottom: 18vw;
+    /* Remova o posicionamento absoluto e outros estilos específicos de localização */
+}
+
+
+/* ------------------- Footer ------------------- */
+/* Footer Styles */
+footer.footer-container {
+    border: 1px solid #000000;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+.footer-column h2 {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.6vw;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-column p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.2vw;
+    font-weight: 500;
+    color: black;
+    margin: 5px 0;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: #464646;
+    height: 10vw;
+}
+
+.main-content {
+    flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+}
+
+
+.content1-1-container {
+    width: 100%;
+    height: 67vw;
+}
+
+#seaside {
+    position: relative; 
+    text-align: center;
+    font-weight: 600;
+    font-family: "Lexend Deca";
+    font-size: 2.9vw;
+    top: 90px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    color: #ffffff;
+    padding: 10px;
+}
+
+#photoREST {
+    position: relative;
+    width: 45vw;
+    height: 22vw;
+    top: 10vw;
+    left: 70px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+
+
+#quer {
+    position: relative; 
+    max-width: 40vw;
+    font-weight: 300;
+    font-family: "Lexend Deca";
+    font-size: 1.7vw;
+    top: 11vw; 
+    left: 24vw; 
+    transform: translateX(-50%); 
+    color: #ffffff;
+    padding: 10px;
+}
+
+#form {
+    width: 30vw;
+    height: auto;
+    border: 3px solid #000000;
+    background-color: #ffffff;
+    position: relative;
+    left: 57vw;
+    top: -15vw;
+}
+
+#blue {
+    background-color: #68A3D5;
+    width: 100%;
+    height: 5.8vw;
+}
+
+#preenche {
+    position: relative; 
+    text-align: center;
+    font-weight: 600;
+    font-family: "Lexend Deca";
+    font-size: 1.6vw; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    color: #ffffff;
+    padding: 10px;
+}
+
+#voce {
+    position: relative; 
+    max-width: 50vw;
+    font-weight: 600;
+    font-family: "Lexend Deca";
+    font-size: 1.2vw;
+    left: 16vw;
+    top: 1vw;
+    transform: translateX(-50%); 
+    color: #000000;
+    padding: 10px;
+    margin-bottom: 1.3vw;
+}
+
+#esc {
+  margin-top: 1.6vw;
+  margin-left: 10px;
+  position: relative; /* Permite o posicionamento absoluto dos textos, se necessário */
+}
+
+#nn {
+  font-size: 1vw;
+  font-weight: 500;
+  font-family: 'Lexend Deca', sans-serif;
+  margin-bottom: 0.5vw; /* Espaço abaixo do texto */
+  display: block;
+  position: relative; /* Garante que o texto esteja na mesma linha horizontal */
+  
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 27vw; /* Ajuste o tamanho conforme necessário */
+  height: 30px; /* Ajuste o tamanho conforme necessário */
+  background-color: white;
+  border: 1px solid black;
+  padding-left: 10px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1vw;
+  color: gray;
+  margin-top: 0; /* Ajuste para garantir que o retângulo esteja alinhado corretamente */
+  position: relative; /* Garante que o retângulo não se sobreponha ao texto */
+  
+}
+
+#country-code{
+  width: 60px;
+  height: 22px;
+}
+
+#submit {
+    height: 3.1vw;
+    width: 28vw;
+    background-color: #FFB422;
+    border-radius: 18px;
+    margin: 1.2vw auto 1.2vw auto; /* Ajusta as margens para centralizar o botão */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o texto dentro do botão */
+    color:white;
+    font-family: "Lexend Deca";
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+#sub{
+  font-family: "Lexend Deca";
+  font-size: 2.1vw;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  line-height: normal;
+}
+
+/* Ajusta o contêiner específico */
+#esc:nth-of-type(4) { /* Seleciona especificamente o 4º contêiner */
+    margin-top: 1.6vw;
+    margin-left: 10px;
+}
+
+/* Ajusta o campo de "Albufeira" */
+input[type="text"]#nome-cidade {
+    width: 27vw;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+    padding-left: 10px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1vw;
+    color: gray;
+    margin-top: 0;
+    position: relative;
+}
+
+
+.info-cards-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Uma coluna por padrão */
+    gap: 20px;
+    justify-items: center; /* Centraliza o conteúdo horizontalmente */
+    margin: 40px auto; /* Espaçamento acima e abaixo */
+    width: 90%;
+}
+
+.info-card {
+    text-align: center;
+    color: white;
+    max-width: 90%;
+}
+
+.icon-square {
+    width: 47px;
+    height: 47px;
+    background-color: white;
+    margin: 0 auto; /* Centraliza o quadrado */
+}
+
+.info-title {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.5vw; /* Responsivo */
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.info-title2 {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 600;
+    margin-top: 3vw;
+    margin-left: 2vw;
+    color: #464646;
+    font-size: 1.3vw;
+    max-width: 45vw;
+}
+
+.tite{
+    padding: 1vw;
+    font-size: 1.5vw; /* Responsivo */
+    font-weight: 800;
+    color: #464646;
+    font-family: "Lexend Deca";
+}
+
+.item-link {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: inherit; /* Garante que a cor do texto não seja alterada */
+    cursor: pointer;
+  }
+  
+.info-description {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1vw; /* Responsivo */
+    font-weight: 600;
+    margin-top: 5px;
+    max-width: 80%;
+}
+
+.info-cards-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Uma coluna por padrão */
+    gap: 20px;
+    justify-items: center; /* Centraliza o conteúdo horizontalmente */
+    margin: 40px auto; /* Espaçamento acima e abaixo */
+    width: 90%;
+    position: relative;
+    top: -45vw;
+    left: 25vw;
+    max-width: 650px;
+    gap: 3vw;
+}
+
+.info-card {
+    text-align: center;
+    color: white;
+    max-width: 90%;
+}
+
+.icon-square {
+    width: 5vw;
+    height: 5vw;
+    background-color: white;
+    margin: 0 auto; /* Centraliza o quadrado */
+}
+
+.info-title {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.5vw; /* Responsivo */
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.info-description {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1vw; /* Responsivo */
+    font-weight: 600;
+    margin-top: 5px;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.highlight {
+    color: #FFB422; /* Cor laranja */
+}
+
+.highlight2 {
+    font-weight: 700;
+}
+
+.divisoria {
+    width: 100%; /* Ocupa toda a largura do body */
+    background-color: white; /* Mantém o fundo branco */
+    padding: 20px 0; /* Adiciona espaçamento vertical (ajusta conforme necessário) */
+    box-sizing: border-box; /* Inclui padding e border na largura e altura totais */
+    height: 37vw;
+}
+
+.tab-container {
+    max-width: 1200px; /* Define uma largura máxima para centralizar o conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo dentro da divisoria */
+}
+
+.tab-content {
+    min-height: 150px; /* Aumenta a altura mínima do conteúdo, ajuste conforme necessário */
+    display: none;
+}
+
+
+.tab-buttons-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #464646;
+    position: relative;
+    right: 1vw;
+    border-radius: 23px;
+}
+
+.tab-button {
+    background-color: transparent; /* Fundo transparente para as abas não selecionadas */
+    border: none; /* Remove qualquer borda */
+    padding: 10px 20px; /* Ajuste o padding para controlar o tamanho do botão */
+    border-radius: 23px; /* Adiciona curvatura suave */
+    cursor: pointer; /* Adiciona um cursor de ponteiro ao passar por cima */
+    transition: background-color 0.3s ease; /* Transição suave para o fundo */
+    font-family: "Lexend Deca";
+    color: white;
+    font-weight: 600;
+    font-size: 1.3vw;
+}
+
+.tab-button.active {
+    background-color: #68A3D5; /* Cor azul quando a aba está selecionada */
+    color: white; /* Texto branco na aba selecionada */
+    border-radius: 23px; /* Mantém a curvatura do botão */
+    width: 18vw;
+}
+
+
+.content {
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #ffffff;
+    height: 30vw;
+    position: relative;
+    right: 1vw;
+}
+
+.tab-content.active {
+    display: block;
+    height: 28vw;
+}
+
+
+/* Footer Styles */
+.footer-container {
+    border: 1px solid #000000;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    max-width: 100%; /* Garante que o footer não ultrapasse a largura da viewport */
+    box-sizing: border-box; /* Inclui padding e borda na largura */
+  }
+
+
+  /* ---------------------------- RESTAURANT/BAR PAGE ---------------------------- */
+
+/* Estilo para o campo select */
+select {
+    width: 27vw;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+    padding-left: 10px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1vw;
+    color: gray;
+    margin-top: 0; 
+    position: relative;
+    appearance: none; /* Remove a seta padrão do select para estilos personalizados */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Seta personalizada para o campo select */
+select::after {
+    content: '▼'; /* Caractere de seta */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Garante que o clique seja no select e não na seta */
+    font-size: 1vw;
+    color: gray;
+}
+
+/* Estilo para o campo input[type="date"] */
+input[type="date"] {
+    width: 27vw;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+    padding-left: 10px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1vw;
+    color: gray;
+    margin-top: 0;
+    position: relative;
+}
+
+/* Estilo para o campo input[type="tel"] */
+input[type="tel"] {
+    width: 27vw;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+    padding-left: 10px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1vw;
+    color: gray;
+    margin-top: 0;
+    position: relative;
+}
+
+/* Estilo para o campo input[type="checkbox"] */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid black;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: 0;
+    position: relative;
+    cursor: pointer; /* Adiciona cursor de pointer */
+}
+
+/* Estilo para o campo input[type="number"] */
+input[type="number"] {
+    width: 27vw;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+    padding-left: 10px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1vw;
+    color: gray;
+    margin-top: 0;
+    position: relative;
+    -moz-appearance: textfield; /* Remove as setas padrão */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+
+
+@media only screen and (max-width: 1366px) {
+    #form{
+        width: 30vw;
+        height: auto;
+        border: 3px solid #000000;
+        background-color: #ffffff;
+        position: relative;
+        left: 57vw;
+        top: -20vw;
+    }
+}
+
+@media only screen and (max-width: 798px) {
+    .hamburger {
+        display: block;
+    }
+    nav ul {
+        display: none;
+    }
+    
+    #photoREST {
+        position: relative;
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+        top: 14vw;
+        left: 70px;
+        background-color: white;
+    }
+
+    #seaside {
+        position: relative; 
+        text-align: center;
+        font-weight: 600;
+        font-family: "Lexend Deca";
+        font-size: 3vw;
+        top: 70px; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        color: #ffffff;
+        padding: 10px;
+    }
+
+    #quer {
+        position: relative; 
+        max-width: 40vw;
+        font-weight: 300;
+        font-family: "Lexend Deca";
+        font-size: 1.7vw;
+        top: 14vw; 
+        left: 22vw; 
+        transform: translateX(-50%); 
+        color: #ffffff;
+        padding: 10px;
+    }  
+
+    
+    #blue {
+        background-color: #68A3D5;
+        width: 100%;
+        height: 8vw;
+    }
+    
+    #voce {
+        position: relative; 
+        max-width: 50vw;
+        font-weight: 600;
+        font-family: "Lexend Deca";
+        font-size: 1.2vw;
+        left: 16vw;
+        top: 1vw;
+        transform: translateX(-50%); 
+        color: #000000;
+        padding: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 25vw;
+        height: 4vw;
+        background-color: white;
+        border: 1px solid black;
+        padding-left: 10px;
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 1vw;
+        color: gray;
+    }
+    #country-code{
+      width: 11vw;
+      height: 14px;
+    }
+    /* Ajusta o campo de "Albufeira" */
+input[type="text"]#nome-cidade {
+    width: 25vw;
+    height: 4vw;
+    background-color: white;
+    border: 1px solid black;
+    padding-left: 10px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1vw;
+    color: gray;
+    margin-top: 0;
+    position: relative;
+}
+.info-cards-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Uma coluna por padrão */
+    gap: 20px;
+    justify-items: center; /* Centraliza o conteúdo horizontalmente */
+    margin: 40px auto; /* Espaçamento acima e abaixo */
+    width: 90%;
+    position: relative;
+    top: -65vw;
+    left: 25vw;
+}
+}
+
+@media only screen and (max-width: 1366px) {
+}
+
+
+@media only screen and (min-width: 2560px) {
+    .tab-container {
+        max-width: 1750px; /* Define uma largura máxima para centralizar o conteúdo */
+        margin: 0 auto; /* Centraliza o conteúdo dentro da divisoria */
+    }
+    nav .logo h1 {
+        font-family: "Lexend Deca";
+        font-size: 2rem;
+        background: linear-gradient(to right, #77B6E6 0%, #FFB422 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #000;
+        font-size: 140%;
+        font-weight: 400;
+        padding: 4px 8px;
+        border-radius: 5px;
+        font-family: "Lexend Deca";
+      }
+  }
+
+@media only screen and (min-width: 3839px) {
+    
+    nav .logo h1 {
+      font-family: "Lexend Deca";
+      font-size: 2rem;
+      background: linear-gradient(to right, #77B6E6 0%, #FFB422 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .tab-container {
+        max-width: 2500px;
+        margin: 0 auto; /* Centraliza o conteúdo dentro da divisoria */
+    }
+
+    #nome{
+        height: 2vw;
+    }
+
+    #tipo{
+        height: 2vw;
+    }
+
+    #email{
+        height: 2vw;
+    }
+    #telefone{
+        height: 2vw;
+        width: 24vw;
+    }
+    #localizacao{
+        height: 2vw;
+    }
+    #proprietario{
+        height: 2vw;    
+    }
+    #country-code{
+        height: 2vw;
+        width: 3vw;
+    }
+ 
+    .duvidas{
+        width: 820px;
+    }
+}
+
+@media only screen and (max-width: 1367px) {
+    #form{
+      top: -250px;
+    }
+      
+  }
