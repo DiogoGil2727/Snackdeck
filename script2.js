@@ -5,8 +5,8 @@ const displayDuration = 5500; // Tempo que cada slide fica visível (em milisseg
 
 // Frases correspondentes às imagens
 const frases = [
-    '"Estender o consumo do meu restaurante/bar para a praia permitiu me alargar o meu número de clientes e a visibilidade dos meus produtos, sem dúvida a coisa certa a fazer."', 
-    '“Fez com que todos os meus potênciais clientes soubessem sempre onde eu estava, aumentou o meu rendimento e organização, tornou-se uma expanção do meu trabalho. ”'
+    '"Estender o consumo do meu restaurante/bar para a praia, permitiu-me alargar o meu número de clientes e a visibilidade dos meus produtos. Sem dúvida a coisa certa a fazer."', 
+    '“Fez com que todos os meus potênciais clientes soubessem sempre onde eu estava; Aumentou o meu rendimento e organização. Tornou-se uma expanção do meu trabalho. ”'
 ];
 
 function showSlide(index) {
